@@ -30,9 +30,9 @@ export default async function Page() {
           priority
           src={olive}
           alt="olive tree"
+          objectFit="cover"
+          fill
           style={{
-            width: "100%",
-            height: "100%",
             position: "absolute",
             opacity: "40%",
             zIndex: 0,
