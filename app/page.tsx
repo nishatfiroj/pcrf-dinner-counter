@@ -1,10 +1,9 @@
-import { getGoogleSheetsData } from "./gsheets"
+import { getGoogleSheetsData } from "./getGoogleSheetsData"
 import Image from "next/image"
 import olive from "../public/olive.png"
 
 export default async function Page() {
-  const range = `Sheet1!B2:B999`
-  const posts = await getGoogleSheetsData(range)
+  const posts = await getData()
 
   let totalDonationsCollected = 0
   posts?.forEach((post: any) => (totalDonationsCollected += parseInt(post[0])))
@@ -44,4 +43,9 @@ export default async function Page() {
       <h2>{donationsProgress}%</h2>
     </div>
   )
+}
+
+async function getData() {
+  const range = `Sheet1!B2:B999`
+  return await getGoogleSheetsData(range)
 }
