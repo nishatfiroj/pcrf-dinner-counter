@@ -4,7 +4,6 @@
   margin: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #fff8e7;
 }
 
 html,
@@ -20,6 +19,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+  background-color: #fff8e7;
 }
 
 h1 {
