@@ -16,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <meta httpEquiv="refresh" content="5" />
       <body className={junge.className}>{children}</body>
     </html>
   )
