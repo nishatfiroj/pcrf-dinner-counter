@@ -8,7 +8,8 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow: hidden;
+  max-height: 100vh;
 }
 
 body {
@@ -24,14 +25,15 @@ body {
 
 h1 {
   z-index: 100;
-  font-size: 10vw;
+  font-size: 8vw;
   color: #666d40;
   background-color: transparent;
 }
 
 h2 {
   z-index: 100;
-  font-size: 5vw;
-  color: #666d40;
+  font-size: 10vw;
+  font-weight: 900;
+  color: #4d5432;
   background-color: transparent;
 }
