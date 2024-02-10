@@ -7,7 +7,7 @@ export async function getGoogleSheetsData(range: string) {
       type: "service_account",
       project_id: "pcrf-dinner",
       private_key_id: process.env.PRIVATE_KEY_ID,
-      private_key: process.env.PRIVATE_KEY,
+      private_key: process.env.PRIVATE_KEY?.split(String.raw`\n`).join("\n"),
       client_email: process.env.CLIENT_EMAIL,
       client_id: process.env.CLIENT_ID,
       token_url: "https://oauth2.googleapis.com/token",

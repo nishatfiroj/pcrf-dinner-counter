@@ -2,7 +2,7 @@ import { getGoogleSheetsData } from "./gsheets"
 import Image from "next/image"
 import olive from "../public/olive.png"
 
-export default async function App() {
+export default async function Page() {
   const range = `Sheet1!B2:B999`
   const posts = await getGoogleSheetsData(range)
 
