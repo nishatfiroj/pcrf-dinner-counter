@@ -6,7 +6,11 @@ export default async function Page() {
   const posts = await getData()
 
   let totalDonationsCollected = 0
-  posts?.forEach((post: any) => (totalDonationsCollected += parseInt(post[0])))
+  posts?.forEach((post: any) =>
+    post[0]!!
+      ? (totalDonationsCollected += parseInt(post[0]))
+      : (totalDonationsCollected += 0)
+  )
 
   const donationsGoal = 15000
 
