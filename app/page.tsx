@@ -24,23 +24,24 @@ export default async function Page() {
         textAlign: "center",
       }}
     >
-      <div>
-        <Image
-          priority
-          src={olive}
-          alt="olive tree"
-          objectFit="cover"
-          fill
-          style={{
-            position: "absolute",
-            opacity: "40%",
-            zIndex: 0,
-          }}
-        />
-      </div>
+      <Image
+        priority
+        src={olive}
+        alt="olive tree"
+        objectFit="cover"
+        fill
+        style={{
+          position: "absolute",
+          opacity: "40%",
+          zIndex: 0,
+        }}
+      />
 
       <h1>Taste of Palestine</h1>
-      <h2>{donationsProgress}%</h2>
+      <div style={{ display: "flex" }}>
+        <h2>${totalDonationsCollected}</h2>
+        <h2>{donationsProgress}%</h2>
+      </div>
     </div>
   )
 }
